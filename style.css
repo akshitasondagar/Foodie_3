@@ -20,22 +20,102 @@ body {
 }
 
 /* BASIC STYLING */
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--lead);
+}
 
+.flex {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
 
+li {
+    list-style: none;
+}
 
+.between {
+    justify-content: space-between;
+}
 
+.gap-2 {
+    gap: 2rem;
+}
 
+.gap-3 {
+    gap: 3rem;
+}
 
-
-
-
-
-
-
-
-
+.wrapper {
+    max-width: 1400px;
+    /* background: gold; */
+    margin: auto;
+    padding-inline: 1.5rem;
+}
 
 /* HEADER STYLING */
+.navbar {
+    min-height: 14vh;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-finger);
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 2rem;
+    background: var(--gold-finger);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: var(--pure-white);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--lead);
+}
+
+.cart-icon {
+    position: relative;
+    color: var(--lead);
+    font-size: 1.3rem;
+}
+
+.cart-icon .cart-value {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    font-size: .85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    color: var(--lead);
+    text-align: center;
+    line-height: 20px;
+}
+
+.desk-action .humburger {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+
+
+
+
+
 
 /* SECTION STYLING */
 
@@ -43,3 +123,40 @@ body {
 
 
 /* MEDIA QUERIES */
+/* navbar */
+@media screen and (max-width:768px) {
+
+    .navlist,
+    .desk-action .btn {
+        display: none;
+    }
+
+    .desk-action .humburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        transform: translateX(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+            rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mobile-menu-active {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
