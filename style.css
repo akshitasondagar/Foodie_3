@@ -31,7 +31,6 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* justify-content: center; */
 }
 
 li {
@@ -178,9 +177,15 @@ p {
 /* FOOTER STYLING */
 
 
+
+
+
+
+
+
 /* MEDIA QUERIES */
 /* navbar */
-@media screen and (max-width:768px) {
+@media screen and (max-width:780px) {
 
     /* HEADER STYLING */
 
@@ -234,5 +239,4 @@ p {
     .gap-4 {
         gap: 4rem;
     }
-
 }
